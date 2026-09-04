@@ -90,7 +90,7 @@ export default function Navbar() {
               <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
                 <Icon name="person" size={18} />
               </div>
-              <span className="hidden sm:inline text-label-sm font-semibold text-slate-700 group-hover:text-primary">
+              <span className="text-label-sm font-semibold text-slate-700 group-hover:text-primary">
                 Login VClass
               </span>
             </Link>
