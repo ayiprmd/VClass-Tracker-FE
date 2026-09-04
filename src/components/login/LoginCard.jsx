@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Icon from '../common/Icon';
+import PrivacyNote from './PrivacyNote';
 import { useAuth } from '../../context/AuthContext';
 
 export default function LoginCard() {

@@ -142,14 +142,14 @@ export function AuthProvider({ children }) {
 
     setSyncStatus('error');
     setSyncError(result.error);
-    if (
-      result.error.includes('kadaluarsa') ||
-      result.error.includes('belum aktif') ||
-      result.error.includes('Unauthorized') ||
-      result.error.includes('401')
-    ) {
+    
+    // Explicit 401 handling
+    if (result.error.toLowerCase().includes('401') || 
+        result.error.toLowerCase().includes('unauthorized') || 
+        result.error.toLowerCase().includes('kadaluarsa')) {
       logoutLocal();
     }
+    
     return { success: false, error: result.error };
   }, [logoutLocal]);
 
