@@ -84,7 +84,7 @@ export default function Navbar() {
             /* Guest / Login Link */
             <Link
               to="/login"
-              className="flex items-center gap-2 pl-2 pr-2 sm:pr-3 py-1.5 rounded-full hover:bg-slate-100 transition-colors group shrink-0"
+              className="flex items-center gap-2 pl-2 pr-2 sm:pr-3 py-1.5 rounded-full hover:bg-slate-100 transition-colors group shrink-0 border border-slate-200 shadow-sm"
               title="Masuk ke Akun VClass"
             >
               <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
