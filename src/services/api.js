@@ -1,4 +1,4 @@
-﻿const API_BASE_URL = 'http://localhost:8000/api';
+﻿const API_BASE_URL = "https://vclass-tracker-be-production.up.railway.app/api";
 
 /** When false, API responses must not re-hydrate localStorage after logout. */
 let sessionPersistAllowed = true;
