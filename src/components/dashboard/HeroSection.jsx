@@ -1,9 +1,10 @@
-import React from 'react';
+import { useAuth } from '../../context/AuthContext';
 import Button from '../common/Button';
 import Icon from '../common/Icon';
 import MacOSMockup from './MacOSMockup';
 
 export default function HeroSection() {
+  const { user } = useAuth();
   return (
     <section className="w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col lg:flex-row items-center gap-stack-lg py-16 md:py-24">
       {/* Kolom Kiri: Copywriting & Actions */}
@@ -21,16 +22,18 @@ export default function HeroSection() {
           Bingung cari tugas yang deadlinenya hari ini? Pusing ngecek satu persatu matkul? Pake VClass Tracker aja, Tinggal cek halaman deadline dan BAMM!
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 mt-2">
-          <Button
-            to="/login"
-            variant="primary"
-            size="md"
-            iconRight={<Icon name="arrow_forward" size={18} />}
-          >
-            Cobain Yuks
-          </Button>
-        </div>
+        {!user && (
+          <div className="flex flex-wrap items-center gap-4 mt-2">
+            <Button
+              to="/login"
+              variant="primary"
+              size="md"
+              iconRight={<Icon name="arrow_forward" size={18} />}
+            >
+              Cobain Yuks
+            </Button>
+          </div>
+        )}
       </div>
 
       {/* Kolom Kanan: MacOS Flying Mockup */}
