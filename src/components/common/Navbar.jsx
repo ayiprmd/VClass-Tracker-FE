@@ -60,8 +60,8 @@ export default function Navbar() {
           {!isGuest && user ? (
             /* Logged in state with user badge & logout */
             <div className="flex items-center gap-2 min-w-0">
-               <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200/60 pl-2 pr-2 sm:pr-3 py-1 rounded-full shadow-2xs min-w-0 max-w-[180px] sm:max-w-none">
-                <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[11px] font-bold">
+               <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200/60 pl-2 pr-2 sm:pr-3 py-1 rounded-full shadow-2xs min-w-0 max-w-[150px] sm:max-w-none">
+                <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[11px] font-bold shrink-0">
                   {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                 </div>
                   <div className="flex flex-col text-left min-w-0">
